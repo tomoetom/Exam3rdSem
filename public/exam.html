@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="vendor/bootstrap.css">
+    <script src="vendor/angular.js"></script>
+    <script src="app.js"></script>
+
+    <script src="factory.js"></script>
+    <title></title>
+</head>
+<body ng-app="examEx" ng-controller="ExamController">
+
+
+
+<div class="container">
+    <h1>Phones</h1>
+    <table class=" table table-striped" >
+        <tr ng-repeat="p in phones" ><td >{{p.name}}</td><td >{{p.phone}}</td><td><button ng-click="removePhone(p.name);">Remove</button></td></tr>
+
+    </table>
+
+    <div>
+        <h2>Add Contact</h2>
+        <input placeholder="insert new name" ng-model="newContact.name"> <input placeholder="insert new phone" ng-model="newContact.phone">   <button ng-click="addContact(newContact);">Add</button>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
